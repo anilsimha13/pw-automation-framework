@@ -34,31 +34,28 @@
 
 #### Folder Structure
 
+```
 pw-automation-framework/
 ├── .github/
-│ └── workflows/
-│ └── playwright.yml
+│   └── workflows/
+│       └── playwright.yml
 ├── .vscode/
 ├── config/
-│ └── (empty)
 ├── data/
-│ └── constants.json
+│   └── constants.json
 ├── debug/
-│ └── (empty)
 ├── logs/
-│ └── (empty)
 ├── node_modules/
 ├── resources/
-│ └── (empty)
 ├── tests/
-│ ├── api/
-│ ├── demo/
-│ ├── devices/
-│ ├── e2e/
-│ ├── example.spec.ts
-│ ├── functional/
-│ ├── helpers/
-│ └── page-objects/
+│   ├── api/
+│   ├── demo/
+│   ├── devices/
+│   ├── e2e/
+│   ├── example.spec.ts
+│   ├── functional/
+│   ├── helpers/
+│   └── page-objects/
 ├── .env
 ├── .gitignore
 ├── env.example
@@ -66,3 +63,4 @@ pw-automation-framework/
 ├── package.json
 ├── playwright.config.ts
 └── README.md
+```
