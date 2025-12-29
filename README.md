@@ -5,8 +5,9 @@
 - [Introduction](#introduction)
 - [Project Setup](#project-setup)
 - [Writing Tests](#writing-tests)
+- [Codegen and Its usecases](#codegen-and-its-usecases)
 
-### 1.Introduction
+### Introduction
 
 #### Playwright Overview
 
@@ -21,7 +22,7 @@
 1. Playwright uses Websocket protocol
 2. Test Runner >> Client API >> Communicate Layer >> Browser Server >> Browsers
 
-### 2.Project Setup
+### Project Setup
 
 #### Playwright Installation
 
@@ -64,3 +65,16 @@ pw-automation-framework/
 ├── playwright.config.ts
 └── README.md
 ```
+
+### Writing Tests
+
+#### First Spec File Creation
+
+- Playwright recognizes the test files with `.spec.ts` or `.test.ts` extensions by default.
+- `npx playwright test --help` to get the help menu for Playwright test runner commands.
+- `navigationTimeout: 30000,` to set the navigation timeout to 30 seconds in `playwright.config.ts` file in `use` block.
+
+### Codegen and Its usecases
+
+- `npx playwright codegen <url>` to launch the codegen tool for the specified URL.
+- `cmd + shift + p` to open the command palette in VS Code.
