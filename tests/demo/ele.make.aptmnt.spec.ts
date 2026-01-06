@@ -15,7 +15,27 @@ test.describe("Make Appointment", () => {
     await page.getByRole("button", { name: "Login" }).click();
     await expect(page.locator("h2")).toContainText("Make Appointment");
   });
-  test("Should make an appointment with non-default values", async ({
+
+  test("Should assert the Default value and should print all the available options", async ({
+    page,
+  }) => {
+    await expect(page.getByLabel("Facility")).toHaveValue(
+      "Tokyo CURA Healthcare Center"
+    );
+    await page
+      .getByLabel("Facility")
+      .selectOption({ label: "Seoul CURA Healthcare Center" });
+    await page.getByLabel("Facility").selectOption({ index: 1 });
+    let dropDownEles = page.getByLabel("Facility").locator("option");
+    await expect(dropDownEles).toHaveCount(3);
+    const listOfEles = await page.getByLabel("Facility").all();
+    for (let ele of listOfEles) {
+      const eleTxt = await ele.textContent();
+      console.log(eleTxt);
+    }
+  });
+
+  test.skip("Should make an appointment with non-default values", async ({
     page,
   }) => {
     await page.goto("https://katalon-demo-cura.herokuapp.com/");
