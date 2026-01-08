@@ -8,7 +8,8 @@
     "login": "npx playwright test ./tests/functional/login.spec.ts --headed",
     "makeapt": "npx playwright test ./tests/demo/make.aptmnt.spec.ts --headed",
     "ele-apt": "npx playwright test ./tests/demo/ele.make.aptmnt.spec.ts --headed",
-    "sauce-demo": "npx playwright test ./tests/functional/inventory.spec.ts --headed"
+    "sauce-demo": "npx playwright test ./tests/functional/inventory.spec.ts --headed",
+    "debug-makeapt": "npx playwright test ./tests/demo/debug.make.aptmnt.spec.ts --headed"
   },
   "keywords": [],
   "author": "",
